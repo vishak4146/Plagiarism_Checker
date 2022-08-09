@@ -25,3 +25,8 @@ def checkGrammar():
     input_json = request.get_json(force=True)
     dictToReturn = {'text': similarity.getGrammarCorrections(input_json['text'])}
     return jsonify(dictToReturn)
+
+
+# We are using If command which will run the web server only if we run the file explicitly
+if __name__ == '__main__':
+    app.run()

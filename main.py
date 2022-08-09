@@ -11,7 +11,7 @@ CORS(app)
 
 
 # We are using the Python decorator to provide the routing to our API
-@app.route('/reportAPI', methods=['POST'])
+@app.route('reportAPI', methods=['POST'])
 def checkPlagiarism():
     input_json = request.get_json(force=True)
     similaritiesList = similarity.returnMatchingSites(similarity.report(str(input_json['text'])))
@@ -20,7 +20,7 @@ def checkPlagiarism():
 
 
 # We are using the Python decorator to provide the routing to our API
-@app.route('/checkGrammar', methods=["POST"])
+@app.route('checkGrammar', methods=["POST"])
 def checkGrammar():
     input_json = request.get_json(force=True)
     dictToReturn = {'text': similarity.getGrammarCorrections(input_json['text'])}

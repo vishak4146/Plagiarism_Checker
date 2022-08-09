@@ -29,4 +29,4 @@ def checkGrammar():
 
 # We are using If command which will run the web server only if we run the file explicitly
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
